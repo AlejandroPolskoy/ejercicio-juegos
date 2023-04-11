@@ -1,0 +1,11 @@
+<div>
+    <form [formGroup]="contactForm" (ngSubmit)="submit()">
+        <div>
+            <label>Nombre</label>
+            <input type="text" formControlName="name">
+            <!-- <div *ngIf="isSubmit && contactForm.controls.name.errors?.required">This field is required</div>
+            <div *ngIf="isSubmit && contactForm.controls.name.errors">This field is required</div> -->
+        </div>
+        <button></button>
+    </form>
+</div>

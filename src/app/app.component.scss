@@ -1,0 +1,12 @@
+nav {
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: cornflowerblue;
+}

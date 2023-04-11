@@ -1,0 +1,14 @@
+.tablero {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tablero_item {
+    width: 150px;
+    border-radius: 10px;
+
+    img {
+        width: 100%;
+    }
+}

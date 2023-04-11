@@ -1,0 +1,14 @@
+<div>
+    <input name="search" type="text" [(ngModel)]="search">
+    <input type="button" (click)="buscar()" value="Buscar">
+</div>
+<div class="galery">
+    <ng-container *ngFor="let item of listado">
+        <app-albums-son [character]="item"></app-albums-son>
+    </ng-container>
+</div>
+<div style="text-align: center; padding: 20px 0;">
+    <app-albums-form (newAlbum)="addAlbum($event)"></app-albums-form>
+</div>
+
+<app-pagination (newPage)="getListado($event)"></app-pagination>

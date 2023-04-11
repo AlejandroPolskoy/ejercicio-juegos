@@ -1,0 +1,13 @@
+<div>
+    <input type="number" [(ngModel)]="amount">
+    <ng-container *ngIf="exchanges">
+        <select #selectCur name="currency" (change)="getRates(selectCur.value)" [(ngModel)]="base">
+            <option *ngFor="let cur of exchanges" value="{{cur.cur}}">{{cur.cur}}</option>
+        </select>
+    </ng-container>
+</div>
+<div>
+    <div *ngFor="let item of exchanges">
+        {{item.value * amount}} - {{item.cur}}
+    </div>
+</div>

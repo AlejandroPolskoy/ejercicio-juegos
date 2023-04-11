@@ -1,0 +1,16 @@
+<div>
+    <label>Filas</label>
+    <input name="rows" type="number" [(ngModel)]="rows">
+    <label>Columnas</label>
+    <input name="cols" type="number" [(ngModel)]="cols">
+    <button (click)="start()">START</button>
+</div>
+<table>
+    <tr *ngFor="let item of game; let index=index">
+        <td *ngFor="let item2 of item; let index2=index">
+            <img *ngIf="!item2[1]" src="{{x}}" (click)="clicked(index, index2)" />
+            <img *ngIf="!item2[0] && item2[1]" src="{{skull}}" />
+            <img *ngIf="item2[0] && item2[1]" src="{{chest}}" />
+        </td>
+    </tr>
+</table>

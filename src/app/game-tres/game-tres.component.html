@@ -1,0 +1,17 @@
+<h2 class="b-clues">Clues: <span data-function="clueCount">{{clues}}</span></h2>
+<div data-function="boardGame" class="b-board-game">
+    <ng-container *ngFor="let item of persons; let index=index">
+        <img [ngClass]="{'disabled': item.isDisabled }" src="{{item.img}}" (click)="quien(index)">
+    </ng-container>
+</div>
+<div data-function="questions" class="b-questions">
+    <ng-container *ngFor="let item of questionsType; let index=index">
+        <h2>{{item.title}}</h2>
+        <div>
+            <ng-container *ngFor="let q of item.questions">
+                <button *ngIf="!item.isDisabled" (click)="question(index, item.key, q, $event)">{{q}}</button>
+                <button *ngIf="item.isDisabled">{{q}}</button>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

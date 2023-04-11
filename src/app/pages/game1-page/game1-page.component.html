@@ -1,0 +1,11 @@
+<h3>Tablero</h3>
+<div class="tablero">
+    <ng-container *ngFor="let item of game; let index=index">
+        <!-- <app-game1-img [card]="item" (click)="card_clicked()"></app-game1-img> -->
+        <div class="tablero_item" (click)="card_clicked(index)">
+            <img *ngIf="item.clicked" src="{{item.img}}" alt="{{item.name}}" />
+            <img *ngIf="item.ticked" src="{{tick}}" alt="" />
+            <img *ngIf="!item.ticked && !item.clicked" src="{{back}}" alt="" />
+        </div>
+    </ng-container>
+</div>

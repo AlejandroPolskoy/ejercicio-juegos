@@ -1,8 +1,6 @@
 <div>
-    <label>Filas</label>
-    <input name="rows" type="number" [(ngModel)]="rows">
-    <label>Columnas</label>
-    <input name="cols" type="number" [(ngModel)]="cols">
+    <label><span class="label_name">Rows:</span><input name="rows" type="number" [(ngModel)]="rows"></label>
+    <label><span class="label_name">Columns:</span><input name="cols" type="number" [(ngModel)]="cols"></label>
     <button (click)="start()">START</button>
 </div>
 <table>

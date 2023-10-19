@@ -1,0 +1,37 @@
+<div class="bg">
+    <h1>Whack-a-Hans Moleman!</h1>
+    <div class="scoreboard">
+        <span>Score</span>
+        <span class="score" >{{ scoreBoard }}</span>
+        <button (click)="startGame()">Start!</button>
+        <span class="score">{{time}}</span>
+        <span>Timer</span>
+    </div>
+    
+    <div class="game">
+        <div [ngClass]="holes[0] ? 'hole hole-up' : 'hole'" (click)="mole_onClick(0)">
+            <div class="mole"></div>
+        </div>
+
+        <div [ngClass]="holes[1] ? 'hole hole-up' : 'hole'" (click)="mole_onClick(1)">
+            <div class="mole"></div>
+        </div>
+
+        <div [ngClass]="holes[2] ? 'hole hole-up' : 'hole'" (click)="mole_onClick(2)">
+            <div class="mole"></div>
+        </div>
+
+        <div [ngClass]="holes[3] ? 'hole hole-up' : 'hole'" (click)="mole_onClick(3)">
+            <div class="mole"></div>
+        </div>
+
+        <div [ngClass]="holes[4] ? 'hole hole-up' : 'hole'" (click)="mole_onClick(4)">
+            <div class="mole"></div>
+        </div>
+
+        <div [ngClass]="holes[5] ? 'hole hole-up' : 'hole'" (click)="mole_onClick(5)">
+            <div class="mole"></div>
+        </div>
+
+    </div>
+</div>

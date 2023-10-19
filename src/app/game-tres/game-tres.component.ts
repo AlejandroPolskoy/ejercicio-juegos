@@ -567,7 +567,7 @@ export class GameTresComponent implements OnInit {
   }
 
   quien(index:number) {
-    this.chosenPerson == this.persons[index] ? alert("u fkn did it!") : alert("nope");
+    this.chosenPerson == this.persons[index] ? alert("You did it!") : alert("Nope!");
     this.restart();
   }
 

@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './exchange.component.html',
   styleUrls: ['./exchange.component.scss']
 })
+
 export class ExchangeComponent implements OnInit {
 
   exchanges:any = [];
@@ -17,14 +18,11 @@ export class ExchangeComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      //this.base = params.get('base');
       this.getRates( this.base );
     });
   }
 
   getRates( base:string | null = 'EUR') {
-    console.log( base );
-    
     this.rates.getRates( base ).subscribe((data:any)=>{
       this.exchanges = [];
       for (const key in data.rates) {

@@ -1,1 +1,12 @@
-<p>home-page works!</p>
+<h2 class="center">JavaScript Games Collection</h2>
+
+<div class="app_galery" *ngIf="applist">
+<div class="app_galery_item" *ngFor="let app of applist">
+    <div class="app_galery_img">
+        <a routerLink="{{app.link}}">
+            <img src="{{app.img}}"/>
+        </a>
+    </div>
+    <h4>{{app.name}}</h4>
+</div>
+</div>

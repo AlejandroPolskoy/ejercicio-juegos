@@ -2,13 +2,22 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .tablero_item {
     width: 150px;
     border-radius: 10px;
-
+    
     img {
         width: 100%;
     }
+}
+
+.center {
+    text-align: center;
+}
+
+.margin-20 {
+    margin: 20px 0;
 }

@@ -23,6 +23,7 @@ import { Game4PageComponent } from './pages/game4-page/game4-page.component';
 import { Game4Component } from './game4/game4.component';
 import { ExchangeComponent } from './exchange/exchange.component';
 import { ExchangePageComponent } from './pages/exchange-page/exchange-page.component';
+import { GameWhackComponent } from './game-whack/game-whack.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ExchangePageComponent } from './pages/exchange-page/exchange-page.compo
     Game4PageComponent,
     Game4Component,
     ExchangeComponent,
-    ExchangePageComponent
+    ExchangePageComponent,
+    GameWhackComponent
   ],
   imports: [
     BrowserModule,

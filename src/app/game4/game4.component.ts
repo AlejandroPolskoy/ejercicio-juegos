@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./game4.component.scss']
 })
 export class Game4Component {
-  cols:number = 0;
-  rows:number = 0;
-  game:any = [];
+  cols:number = 4;
+  rows:number = 4;
+  game:any;
   tesoro:number[] = [0,0];
 
   chest = "./assets/exercise-4/chest.png";
@@ -16,6 +16,7 @@ export class Game4Component {
   x = "./assets/exercise-4/x.png";
 
   start() {
+    this.game = [];
     this.tesoro[0] = this.getRandom( this.rows );
     this.tesoro[1] = this.getRandom( this.cols );
 
@@ -27,13 +28,15 @@ export class Game4Component {
         this.game[i][j][1] = false;
       }
     }
-    console.log( this.game );
-    
   }
 
   clicked( id:number, id2:number) {
     this.game[id][id2][1] = true;
-    if(this.game[id][id2][0]) alert("has ganado");
+    if(this.game[id][id2][0]) {
+      setTimeout(() => {
+        alert("Found it!");
+      }, 100);
+    }
   }
 
   getRandom( num:number ) {

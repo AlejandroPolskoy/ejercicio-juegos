@@ -10,6 +10,7 @@ import { Game3PageComponent } from './pages/game3-page/game3-page.component';
 import { Game4Component } from './game4/game4.component';
 import { Game4PageComponent } from './pages/game4-page/game4-page.component';
 import { ExchangePageComponent } from './pages/exchange-page/exchange-page.component';
+import { GameWhackComponent } from './game-whack/game-whack.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,9 @@ const routes: Routes = [
   },
   {
     path: 'exchange', component: ExchangePageComponent
+  },
+  {
+    path: 'whack', component: GameWhackComponent
   },
 ];
 

@@ -104,18 +104,14 @@ export class Game1PageComponent implements OnInit{
   total = 12;
 
   ngOnInit(): void {
-    const arrayz = [...this.cardArray]
-    this.game = [];
-    for(let i=0; i<12; i++) {
-      this.game.push( arrayz.splice( this.getRandom( this.total - i ), 1 )[0] );
-    }
+    this.restart();
   }
 
   card_clicked( index:number) {
     if(this.current) { return }
     this.game[ index ].clicked = true;
 
-    if(this.before) {
+    if(this.before && this.before != this.game[index]) {
       this.current = index;
       if(this.game[index].name == this.before.name) {
         setTimeout(()=> {
@@ -146,5 +142,16 @@ export class Game1PageComponent implements OnInit{
 
   getRandom( num:number ) {
     return Math.floor(Math.random() * (num))
+  }
+
+  restart() {
+    let arrayz = JSON.parse(JSON.stringify(this.cardArray));
+    this.game = [];
+    for(let i=0; i<12; i++) {
+      this.game.push( arrayz.splice( this.getRandom( this.total - i ), 1 )[0] );
+    }
+    this.current = null;
+    this.before = null;
+    this.count = 0;
   }
 }
